@@ -1,0 +1,181 @@
+[
+    {
+        "id": 1,
+        "title": "General Knowledge COVID-Quiz",
+        "description": "Test your knowledge on the COIVD",
+        "meta_tags": [
+            "COVID"
+        ],
+        "difficulty": "1",
+        "questions": [
+            {
+                "text": "Where did the Coronavirus (SARS-CoV-2) start spreading first?",
+                "answers": [
+                    "Tokyo, Japan",
+                    "Beijing, China",
+                    "Wuhan, China",
+                    "NYC, US",
+                    "Vietnam"
+                ],
+                "correct_answer": 2,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "What range of people have been confirmed to have COVID-19?",
+                "answers": [
+                    "1 million",
+                    "0.1 million",
+                    "10 million",
+                    "100 million"
+                ],
+                "correct_answer": 2,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "What is the current classification of the COVID-19 ?",
+                "answers": [
+                    "Epidemic",
+                    "Pandemic",
+                    "Outbreak",
+                    "Fatal Disease"
+                ],
+                "correct_answer": 1,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "How many people can get infected by an infected person under normal conditions?",
+                "answers": [
+                    "2-4",
+                    "5-7",
+                    "7-19",
+                    "More than 20",
+                    "Highly Variable"
+                ],
+                "correct_answer": 0,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "How long has it been since the COVID-19 started spreading?",
+                "answers": [
+                    "Since Mid-November",
+                    "Since Mid-October",
+                    "Since Mid-January",
+                    "Since Early-December",
+                    "Since Early-January"
+                ],
+                "correct_answer": 0,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Advanced COVID-19 Quiz",
+        "description": "Quiz",
+        "meta_tags": [
+            "COVID-Quiz"
+        ],
+        "questions": [
+            {
+                "text": "What is our best strategy against the COVID-19?",
+                "answers": [
+                    "Social Distancing followed by Contact Tracing",
+                    "Repurposing",
+                    "Vaccination",
+                    "Contact Tracing followed by Social Distancing",
+                    "Stalling Economic Activites"
+                ],
+                "correct_answer": 0,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "What do we mean by social distancing?",
+                "answers": [
+                    "Completely avoiding social interactions",
+                    "Social Interactions are allowed but not on large scale",
+                    "Stay connected digitally and maintain physical distance",
+                    "Go out of home only once everyday",
+                    "None of the Above"
+                ],
+                "correct_answer": 2,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                   "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "Until when was the first major national lockdown declared?",
+                "answers": [
+                    "14 April",
+                    "10 April",
+                    "11 April",
+                    "30 April",
+                    "1 May"
+                ],
+                "correct_answer": 0,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "You received a message from the following sources, which one is the most reliable?",
+                "answers": [
+                    "Whatsapp",
+                    "Facebook",
+                    "Twitter",
+                    "World Health Organization",
+                    "An SMS on the Mobile Phone"
+                ],
+                "correct_answer": 3,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            },
+            {
+                "text": "What should you do if someone in your neighborhood needs help?",
+                "answers": [
+                    "Ignore and continue distancing",
+                    "Try to help them by going to their place",
+                    "Try to help them through digital tools and if needed, take precautions and go their place.",
+                    "Directly inform the Police about it",
+                    "Ask someone else to help them"
+                ],
+                "correct_answer": 2,
+                "global_correct": 0,
+                "global_total": 0,
+                "meta_tags": [
+                    "COVID-Quiz"
+                ]
+            }
+        ]
+    }
+]
