@@ -1,0 +1,21 @@
+{
+  "name": "cov-id-19",
+  "version": "1.0.0",
+  "description": "An app to help spread social awareness regarding the covid-19 pandemic.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "covid"
+  ],
+  "author": "Shakul Pathak",
+  "license": "ISC"
+}
