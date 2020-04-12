@@ -1,7 +1,7 @@
 <% include header2   %>
 <html>
 <body style="background-image: url('static/bg_black.jpg')">
-  <nav>
+  <nav id="home_navigator">
     <div class="nav-wrapper grey">
       <a href="#" class="brand-logo" style="padding-left:1em;font-size:20px;">Coronavirus Rapid Awareness Solution (CRAS) </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -11,7 +11,23 @@
       </ul>
     </div>
   </nav>
-
+  <nav id="mob_nav" class="orange">
+  <a href="#" class="brand-logo"><h5><b>C.R.A.S.</b></h5> </a>
+  <ul id="slide-out" class="sidenav white">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="static/CRAS.png">
+      </div>
+      <a href="#"><span class="black-text name" style="padding-bottom:80px;"></span></a>
+    </div></li>
+    <li><h4 style="padding-left:5px;"><b><br>Options</h4></b> </li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect waves-light" href="/main"><i class="material-icons">assignment</i>Take the Quiz!</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect waves-light modal-trigger" href="#linksmodal"><i class="material-icons">contact_phone</i>Verified Links</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="btn-floating btn-small pulse grey sidenav-trigger" id="menu_icon" style="color:white;"><i class="material-icons">menu</i></a>
+  </nav>
   <div id="linksmodal" class="modal">
     <div class="modal-content">
       <blockquote><h4><b><center>Verified Links for Help & Info</center></b></h4></blockquote>
@@ -37,9 +53,9 @@
  <div class="row">
  <div class="col s4">
  <div class="carousel left" style="margin-left:0%;z-index:1;">
-    <a class="carousel-item"><img class="materialboxed hoverable" height="300" width="200" src="./static/image/1.jpg"></a>
-    <a class="carousel-item"><img class="materialboxed hoverable" height="300" width="200" src="./static/image/2.jpg"></a>
-    <a class="carousel-item"><img class="materialboxed hoverable" height="300" width="200" src="./static/image/3.jpg"></a>
+    <a class="carousel-item"><img class="materialboxed hoverable infog" height="300" width="200" src="./static/image/1.jpg"></a>
+    <a class="carousel-item"><img class="materialboxed hoverable infog" height="300" width="200" src="./static/image/2.jpg"></a>
+    <a class="carousel-item"><img class="materialboxed hoverable infog" height="300" width="200" src="./static/image/3.jpg"></a>
   </div>
   </div>
   <div class="col s8">
@@ -131,6 +147,7 @@
     $('.materialboxed').materialbox();
     $('.tabs').tabs();
     $('.modal').modal();
+    $('.sidenav').sidenav();
   });
 
   </script>
