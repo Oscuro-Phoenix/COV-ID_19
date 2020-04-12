@@ -1,6 +1,6 @@
 <% include header2   %>
 <html>
-<body style="background-image: url('static/bg_black.jpg')">
+<body style="background-image: url('static/bg_black.jpg'); background-size:cover; background-repeat:no-repeat;">
   <nav id="home_navigator">
     <div class="nav-wrapper grey">
       <a href="#" class="brand-logo" style="padding-left:1em;font-size:20px;">Coronavirus Rapid Awareness Solution (CRAS) </a>
@@ -11,7 +11,7 @@
       </ul>
     </div>
   </nav>
-  <nav id="mob_nav" class="orange">
+  <nav id="mob_nav" class="orange" style="height:70px;">
   <a href="#" class="brand-logo"><h5><b>C.R.A.S.</b></h5> </a>
   <ul id="slide-out" class="sidenav white">
     <li><div class="user-view">
@@ -26,8 +26,9 @@
     <li><div class="divider"></div></li>
     <li><a class="waves-effect waves-light modal-trigger" href="#linksmodal"><i class="material-icons">contact_phone</i>Verified Links</a></li>
   </ul>
-  <a href="#" data-target="slide-out" class="btn-floating btn-small pulse grey sidenav-trigger" id="menu_icon" style="color:white;"><i class="material-icons">menu</i></a>
-  </nav>
+  <a href="#" data-target="slide-out" class="btn-floating btn-large grey sidenav-trigger pulse" id="menu_icon" style="margin-top:6px;"><i class="material-icons">menu</i></a>
+    </nav>
+   
   <div id="linksmodal" class="modal">
     <div class="modal-content">
       <blockquote><h4><b><center>Verified Links for Help & Info</center></b></h4></blockquote>
@@ -149,6 +150,5 @@
     $('.modal').modal();
     $('.sidenav').sidenav();
   });
-
   </script>
 </html>
