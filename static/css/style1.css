@@ -1,6 +1,32 @@
-body {
-  background-image: url('bg_grey.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+@media only screen and (max-width: 768px) {
+  #home_navigator
+  {
+  	display: none;
+
+  }
+  .infog
+  {
+  	height: 150px;
+  	width : 50%;
+  	margin-left: 30%;
+  }
+  #abt, #symp, #prevent
+  {
+  	height: 150px;
+  	overflow: scroll;
+  }
+    #menu_icon
+  {
+  	margin-top:3%;
+  }
+
+}
+@media only screen and (min-width: 768px) {
+  #slide-out, #menu_icon, #mob_nav
+  {
+  	display: none;
+
+  }
+
+  
 }
