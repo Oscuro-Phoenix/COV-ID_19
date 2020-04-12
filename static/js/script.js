@@ -28,7 +28,7 @@ $(document).ready(function() {
     $('#ajaxloading').show();
     $('#reload').show();
   });
-  $('#title').text("The COVID-Quiz - 1st Edition");
+  $('#title').text("Questionnaire");
   $('#title').hide().fadeIn("slow");
   $('#nameForm').hide().fadeIn("slow");
   $('#description').hide();
@@ -61,8 +61,9 @@ $(document).ready(function() {
 
   //start quiz
   document.getElementById("start_quiz").addEventListener("click", function(e) {
-    // console.log("start");
     $('#editQuiz').hide();
+    $('#covidgif').hide();
+    $('#quescontain').toggle('show');
     e.preventDefault();
     nameForm();
   });
@@ -75,68 +76,6 @@ $(document).ready(function() {
       $("#nextQuestion").click();
     }
   });
-
-    // edit quiz
-    $(".editQuizFormDiv").delegate('.editQuizAddRemoveAns', 'click', function(e) {
-      var tempID = this.id;
-      var tempChunks = tempID.split('-');
-      var tempQuestionNum = parseInt(tempChunks[1]);
-      var tempAnswerNum = parseInt(tempChunks[2]);
-      // add answer
-      if (tempID.length < 21) {
-        if ((tempAnswerNum + 1) < 7) {
-          tempAnswerNum += 1;
-          $('<input>').attr({
-            type: 'radio',
-            name: 'answersr' + tempQuestionNum,
-            class: 'answersradioclass',
-            id: 'answerradiobutton-' + tempQuestionNum + '-' + tempAnswerNum
-          }).appendTo('#answer' + tempQuestionNum);
-          $('<input>').attr({
-            type: 'text',
-            id: 'answer-' + tempQuestionNum + '-' + tempAnswerNum,
-            class: 'form-control editanswers',
-            name: 'answers',
-            placeholder: 'Answer Choice'
-          }).appendTo('#answer' + tempQuestionNum);
-          $('<br>').attr({
-            id: 'br-' + tempQuestionNum + '-' + tempAnswerNum
-          }).appendTo('#answer' + tempQuestionNum);
-          $(this).attr("id", "editQuizAddAns-" + tempQuestionNum + '-' + tempAnswerNum);
-          $('#editQuizRemoveAns-' + tempQuestionNum + '-' + (tempAnswerNum - 1)).attr("id", "editQuizRemoveAns-" + tempQuestionNum + '-' + tempAnswerNum);
-        }
-        else {
-          $('#placeholderWarning > p > span').text("Cannot add answer choice - reached maximum number of answers!");
-          $('#placeholderWarning > p > span').append('&nbsp;');
-          $('#placeholderWarning').show();
-          $("#placeholderWarning").fadeTo(notificationFadeTime, 500).slideUp(500, function(){
-            $("#placeholderWarning").hide();
-          });
-        }
-      }
-      // remove answer
-      else {
-        // console.log("remove");
-        if ((tempAnswerNum - 1) > 0) {
-          $('#answerradiobutton-' + tempQuestionNum + '-' + tempAnswerNum).remove();
-          $('#answer-' + tempQuestionNum + '-' + tempAnswerNum).remove();
-          $('#br-' + tempQuestionNum + '-' + tempAnswerNum).remove();
-          tempAnswerNum -= 1;
-          $(this).attr("id", "editQuizRemoveAns-" + tempQuestionNum + '-' + tempAnswerNum);
-          $('#editQuizAddAns-' + tempQuestionNum + '-' + (tempAnswerNum + 1)).attr("id", "editQuizAddAns-" + tempQuestionNum + '-' + tempAnswerNum);
-        } 
-        else {
-          $('#placeholderWarning > p > span').text("Cannot remove answer choice - reached minimum number of answers!");
-          $('#placeholderWarning > p > span').append('&nbsp;');
-          $('#placeholderWarning').show();
-          $("#placeholderWarning").fadeTo(notificationFadeTime, 500).slideUp(500, function(){
-            $("#placeholderWarning").hide();
-          });
-        }
-      }
-      e.preventDefault();
-      return false;
-    });
 
   $(".editQuizFormDiv").delegate('.removeQuestion', 'click', function(e) {
     if (($("#editQuiz > div").length) > 3) {
@@ -158,7 +97,7 @@ $(document).ready(function() {
     return false;
   });
 });
-// After name is submitted on initial screen
+// After name is submitted on start
 function nameForm(){
   name = $('#nameForm').serializeArray()[0]["value"];
   if (name.length === 0) {
@@ -227,10 +166,8 @@ function resetQuizzes() {
   timeout: 2000,
   beforeSend: function(){
     $("#reset_quiz").attr("disabled", true);
-      // console.log ("BEFORE RESET SEND");
     },
     complete: function() {
-      // console.log ("COMPLETE RESET LOADING");
       $('#ajaxloading').hide();
       $('#backHome').hide();
       $('#reload').hide();
@@ -384,7 +321,7 @@ function back(){
   }
 }
 
-// Check which radio button is checked and record
+// Check for radio button 
 function whichChecked() {
   for (var i = 0; i < numAns; i++) {
     if ($("input[name='answers'][id='" + i + "']").is(':checked')) {
@@ -410,8 +347,10 @@ function whichChecked() {
   }
 }
 
-// top ten users
+// Leaderboard
 function topTen(allUsers) {
+  $('#quess').hide();
+  $('#ress').toggle('show');
   allUsers.sort(function(a,b) {
     return ((b["user_correct"]*1.0)/b["user_total"]) - ((a["user_correct"]*1.0)/a["user_total"]);
   });
@@ -632,7 +571,7 @@ function nextQuestion() {
       $('#piechart').fadeIn("slow");
       $('#home').show();
       calculateScore();
-      $('#nameScore').text(name + ", your score on this quiz is: " + score + "/" + quizLength + " questions or " + Math.round(100*score/quizLength) + "%");
+      $('#nameScore').text(name + ", here's your result: " + score + "/" + quizLength + ", share this with friends!");
       scorePerQuestionTable();
 
       // Global Scores
