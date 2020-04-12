@@ -2,7 +2,7 @@
 <body style="background-image: url('static/bg_health.jpg'); background-repeat:no-repeat; background-size:cover;">
 
  <div class="container">
-  <div class="card-panel teal lighten-1"><center><h1 style="font-weight:bold;color:white;" id="title"></h1></center> </div>
+  <div class="card-panel teal lighten-1"><center><h3 style="font-weight:bold;color:white;" id="title"></h3></center> </div>
   <h3 id="description"></h3>
   <div class="customNotifications">
     <div class="alert alert-danger" id="nameFormWarning" role="alert">
@@ -44,9 +44,9 @@
         <br>
         <div class="col s4 offset-s4">
         <center><br><br><br><br><br><br>
-        <input class="btn btn-primary red" class="form-control" type="submit" id="start_quiz" value="Let's Begin!">
-        <a href="/"><div class="btn grey" type="submit">Return to Home Page</div></a> 
-        </center>
+        <input class="btn btn-small red" type="submit" id="start_quiz" value="Begin!">
+                </center><br><br>
+        <center><a href="/"><div class="btn grey" type="submit">Home</div></a> </center>
         <br><br><br>
         </div>
         </div>
@@ -105,19 +105,19 @@
   <center>
     <canvas id="piechart" width="480" height="250"></canvas>
   </center>
-  <table class="table table-hover" id="scoreTable">
+  <table class="table table-hover" id="scoreTable" style="font-size:10px;">
     <thead>
       <tr>
         <th>Question</th>
         <th>Your Answer</th>
         <th>Correct Answer</th>
-        <th>Global Correct</th>
+        <th>Percent Correct</th>
       </tr>
       <tbody>
       </tbody>
     </thead>
   </table>
-  <h2 id="tenScores">Leaderboard :</h2>
+  <h4 id="tenScores">Leaderboard :</h4>
   <table class="table table-hover" id="userTable">
     <thead>
       <tr>
